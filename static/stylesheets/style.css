@@ -1,0 +1,184 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+*{
+  box-sizing:border-box;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: #F7F8F9;
+  height: 100vh;
+  font-family: 'Open Sans';
+}
+
+button{
+  border-radius: 0;
+  width: 100%;
+  height: 50%;
+}
+
+button[type="submit"] {
+  -webkit-appearance:none; -webkit-border-radius:0;
+}
+
+button i{
+  float: right;
+  padding-right: 30px;
+  margin-top: 3px;
+}
+
+/* abstract - real */
+
+button.a1{
+  /* background-color: #1aaaf8; */
+  background-image: url(https://www.indianartzone.com/pub/media/catalog/product/0/1/01a_1.jpg) ;
+}
+
+button.r1{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQT10AayDARR1XtHRdB0UyS4v0oivToTMjrRtYMPiMiOmmUGeOA);
+}
+
+button.a2{
+  /* background-color: #1aaaf8; */
+  background-image: url(https://i.pinimg.com/originals/92/0a/6b/920a6b40dc75f9f8798f9ba3520165e7.jpg) ;
+}
+
+button.r2{
+  background-image: url(https://www.history.com/.image/t_share/MTY1MTc1OTc1MjEzMDE2Mzc2/topic-brooklyn-bridge-gettyimages-91680627-promo.jpg);
+}
+
+button.a3{
+  /* background-color: #1aaaf8; */
+  background-image: url(https://a.1stdibscdn.com/rocky-hawkins-paintings-woman-in-white-for-sale/a_4983/1560455672565/Woman_in_White_2019_oil_on_canvas_12_x_12_inches_1_700_master.jpg?width=768) ;
+}
+
+button.r3{
+  background-image: url(https://images-na.ssl-images-amazon.com/images/I/41PZfD6MPYL._AC_SY400_.jpg);
+}
+
+button.submit{
+  background-color: #726966;
+  height: 50px;
+  width: 190px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size:18px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-left: 0px;
+  border-radius: 10px;
+}
+
+/* https://www.artnews.com/wp-content/uploads/2019/11/signac-la-corne-dor-constantinople.jpg */
+
+
+#tip{
+  text-align: left;
+  color: #c0c9ce;
+  font-size: 14px;
+}
+
+#hostname{
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  left: 0;
+  color: #8f9ea8;
+  font-size: 24px;
+}
+
+#content-container{
+  z-index: 2;
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  padding: 10px;
+  max-width: 940px;
+  height: 100%;
+}
+
+#content-container-center{
+  display: table-cell;
+  text-align: center;
+}
+
+#content-container-center h3{
+  color: #254356;
+}
+
+#choice{
+  transition: all 300ms linear;
+  line-height: 1.3em;
+  
+  vertical-align: middle;
+  font-size: 3em;
+}
+#choice a{
+  text-decoration:none;
+}
+#choice a:hover, #choice a:focus{
+  outline:0;
+  text-decoration:underline;
+}
+
+#choice button{
+  display: block;
+  height: 190px;
+  width: 190px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size:18px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 50px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+}
+
+/* #choice button.a:hover{
+  background-color: #1488c6;
+}
+
+#choice button.b:hover{
+  background-color: #00a2a1;
+}
+
+#choice button.a:focus{
+  background-color: #1488c6;
+}
+
+#choice button.b:focus{
+  background-color: #00a2a1;
+} */
+
+#background-stats{
+  z-index:1;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+#background-stats div{
+  transition: width 400ms ease-in-out;
+  display:block;
+  margin-bottom:-4px;
+  width:50%;
+  height:100%;
+}
+
+.row {
+  overflow: hidden;
+  padding: 10px;
+  display: block;
+}
+.column {
+  float: left;
+  width: 50%
+}

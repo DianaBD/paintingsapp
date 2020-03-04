@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Taste in Paintings!</title>
+  <base href="/index.html">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+  <meta name="keywords" content="docker-compose, docker, stack">
+  <meta name="author" content="Tutum dev team">
+  <link rel='stylesheet' href="{{ url_for('static',filename='stylesheets/style.css') }}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div id="content-container">
+    <div id="content-container-center">
+      <h3>Find Your Taste in Paintings!</h3>
+      <form id="choice" name='form1' class="row" method="POST" action="/">
+        <button id="r1" type="submit" name="vote11" class="r1 column" value="r1" >{{option_r1}}</button>
+        <button id="a1" type="submit" name="vote11" class="a1 column" value="a1">{{option_a1}}</button>
+      </form>
+      <form id="choice" name='form2' class="row" method="POST" action="/">
+        <button id="r2" type="submit" name="vote12" class="r2 column" value="r2">{{option_r2}}</button>
+        <button id="a2" type="submit" name="vote12" class="a2 column" value="a2">{{option_a2}}</button>
+      </form>
+      <form id="choice" name='form3' class="row" method="POST" action="/">
+        <button id="r3" type="submit" name="vote13" class="r3 column" value="r3">{{option_r3}}</button>
+        <button id="a3" type="submit" name="vote13" class="a3 column" value="a3">{{option_a3}}</button>
+      </form>
+      <div id="submit-container" class="row">
+        <button id="submit" type="submit" name="submit" class="submit" value="1" method="POST">Submit</button>
+      </div>
+      <!-- <div id="tip">
+        (Tip: you can change your vote)
+      </div> -->
+      <!-- <div id="hostname">
+        Processed by container ID {{hostname}}
+      </div> -->
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  
+  {% if vote11 %}
+    <script>
+      var vote11 = "{{vote11}}";
+
+      if (vote11 == "r1") {
+        $(".r1").prop('disabled', true);
+        $(".r1").html('<i class="fa fa-check-circle"></i>');
+        $(".a1").css('opacity', '0.5');
+      }
+      if (vote11 == "a1") {
+        $(".a1").prop('disabled', true);
+        $(".a1").html('{{option_a1}} <i class="fa fa-check-circle"></i>');
+        $(".r1").css('opacity', '0.5');
+      }
+    </script>
+  {% endif %}
+
+  {% if vote12 %}
+    <script>
+      var vote12 = "{{vote11}}";
+
+      if (vote12 == "r1") {
+        $(".r2").prop('disabled', true);
+        $(".r2").html('<i class="fa fa-check-circle"></i>');
+        $(".a2").css('opacity', '0.5');
+      }
+      if (vote12 == "a1") {
+        $(".a2").prop('disabled', true);
+        $(".a2").html('{{option_a1}} <i class="fa fa-check-circle"></i>');
+        $(".r2").css('opacity', '0.5');
+      }
+    </script>
+  {% endif %}
+
+</body>
+
+</html>
